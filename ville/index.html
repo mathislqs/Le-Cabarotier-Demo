@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Où Sommes-Nous ? – Le Cabarotier</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="../style.css" />
+  <!-- CSS spécifique à cette page -->
+  <link rel="stylesheet" href="ville.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a href="../index.html" class="nav-logo">Le Cabarotier</a>
+    <ul class="nav-links">
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../produits/">Nos Produits</a></li>
+      <li><a href="../ville/">Où Sommes Nous ?</a></li>
+      <li><a href="../evenements/">Nos Événements</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO PAGE ===================== -->
+  <section class="ville-hero">
+    <h1>Où sommes-nous ?</h1>
+    <p>Retrouvez-nous dans nos deux caves, au cœur du Pays de Retz</p>
+  </section>
+
+  <!-- ===================== CARTES MAGASINS ===================== -->
+  <section class="section-magasins">
+    <div class="magasins-grid">
+
+      <!-- Rouans -->
+      <article class="magasin-card">
+      <a href="../rouans/index.html">
+        <div class="magasin-card-img">
+          <img src="../Images/degustation-2.jpg" alt="Le Cabarotier – Rouans" />
+        </div>
+        <div class="magasin-card-body">
+          <h2>Rouans</h2>
+          <address>
+            <span class="adresse-icon">📍</span>
+            <!-- Remplacer par l'adresse réelle -->
+            18 Pl. de la Mairie, 44640 Rouans
+          </address>
+          <p class="magasin-desc">
+            Bar avec étage et terrasse prêt à vous accueillir pour vous servir
+            la meilleure bière possible.
+          </p>
+          <div class="magasin-horaires">
+            <span class="horaires-label">Horaires</span>
+            <span>Mar–Sam : 10h–20h</span>
+            <span>Dim–Lun : Fermé</span>
+          </div>
+          <!-- Remplacer href par le lien Google Maps ou mailto réel -->
+          <a href="../contact/index.html" class="btn-primary magasin-btn">
+            <span class="btn-icon">📞</span>
+            Nous contacter
+          </a>
+        </div>
+      </a>
+      </article>
+      <!-- Saint-Hilaire -->
+      <article class="magasin-card">
+      <a href="../rouans/index.html">
+        <div class="magasin-card-img">
+          <img src="../Images/staff-degustation-3.jpg" alt="Le Cabarotier – Saint-Hilaire" />
+        </div>
+        <div class="magasin-card-body">
+          <h2>Saint-Hilaire</h2>
+          <address>
+            <span class="adresse-icon">📍</span>
+            <!-- Remplacer par l'adresse réelle -->
+            2 Rue des Vignes, 44320 Saint-Hilaire-de-Chaléons
+          </address>
+          <p class="magasin-desc">
+            Bar avec étage et terrasse prêt à vous accueillir pour vous servir
+            la meilleure bière possible.
+          </p>
+          <div class="magasin-horaires">
+            <span class="horaires-label">Horaires</span>
+            <span>Mar–Sam : 10h–20h</span>
+            <span>Dim–Lun : Fermé</span>
+          </div>
+          <a href="../contact/index.html" class="btn-primary magasin-btn">
+            <span class="btn-icon">📞</span>
+            Nous contacter
+          </a>
+        </div>
+      </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== CARTE GOOGLE MAPS ===================== -->
+  <section class="section-carte" id="adresse">
+    <div class="carte-inner">
+      <h2>Nos adresses sur la carte</h2>
+      <div class="carte-wrapper">
+        <iframe 
+        title="Carte des magasins"
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d86837.01257921717!2d-1.9458858416060596!3d47.14499255597385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sle%20cabarotier!5e0!3m2!1sfr!2sfr!4v1776845787887!5m2!1sfr!2sfr" 
+        width="100%" 
+        height="420" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contact">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <h3>Le Cabarotier</h3>
+        <p>commerce de détail de boissons en magasin spécialisé</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#" class="underline">vendeur</a></li>
+          <li><a href="#">Pro experience</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn more</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Customer stories</a></li>
+          <li><a href="#">Best practices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Le Cabarotier — Cave &amp; Bières Artisanales. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

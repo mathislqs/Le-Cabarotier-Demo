@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Événements – Le Cabarotier</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="../../style.css" />
+  <!-- CSS spécifique -->
+  <link rel="stylesheet" href="evenements.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a href="../../" class="nav-logo">Le Cabarotier</a>
+    <ul class="nav-links">
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../produits/">Nos Produits</a></li>
+      <li><a href="../ville/">Où Sommes Nous ?</a></li>
+      <li><a href="../evenements/">Nos Événements</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="evenements-hero">
+    <div class="evenements-hero-inner">
+      <span class="evenements-hero-label">Le Cabarotier – Rouans</span>
+      <h1>Événements</h1>
+      <p>Soirées, dégustations et concerts au cœur du village</p>
+    </div>
+  </section>
+
+  <!-- ===================== À VENIR ===================== -->
+  <section class="section-avenir">
+    <div class="avenir-inner">
+      <h2>À Venir</h2>
+
+      <!-- CAROUSEL -->
+      <div class="carousel" id="carousel-avenir">
+
+        <button class="carousel-btn carousel-btn--prev" aria-label="Événement précédent">&#9664;</button>
+
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track">
+
+            <!-- Événement 1 -->
+            <article class="carousel-slide">
+              <div class="evenement-featured">
+                <div class="evenement-featured-img">
+                  <!-- Remplace par ta vraie image -->
+                  <img src="../../Images/evenement-test.jpeg" alt="Dégustation de Bières Belges" />
+                </div>
+                <div class="evenement-featured-body">
+                  <h3>Dégustation de Bières Belges</h3>
+                  <ul class="evenement-meta">
+                    <li>
+                      <span class="meta-icon">📅</span>
+                      <span>Vendredi 15 mai 2026</span>
+                    </li>
+                    <li>
+                      <span class="meta-icon">🕕</span>
+                      <span>18h00</span>
+                    </li>
+                    <li>
+                      <span class="meta-icon">📍</span>
+                      <span>Le Cabarotier – Rouans</span>
+                    </li>
+                  </ul>
+                  <p class="evenement-desc">
+                    Venez découvrir notre sélection exceptionnelle de bières belges
+                    artisanales. Une soirée dégustation animée par un maître brasseur.
+                  </p>
+                  <a
+                    href="../../contact/?sujet=evenement&lieu=rouans"
+                    class="btn-primary evenement-btn"
+                  >
+                    <span class="btn-icon">📩</span>
+                    Réserver ma place
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Événement 2 — duplique ce bloc pour en ajouter d'autres -->
+            <article class="carousel-slide">
+              <div class="evenement-featured">
+                <div class="evenement-featured-img">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Jazz & Bières" />
+                </div>
+                <div class="evenement-featured-body">
+                  <h3>Soirée Jazz & Bières</h3>
+                  <ul class="evenement-meta">
+                    <li>
+                      <span class="meta-icon">📅</span>
+                      <span>Samedi 7 juin 2026</span>
+                    </li>
+                    <li>
+                      <span class="meta-icon">🕕</span>
+                      <span>20h00</span>
+                    </li>
+                    <li>
+                      <span class="meta-icon">📍</span>
+                      <span>Le Cabarotier – Rouans, terrasse</span>
+                    </li>
+                  </ul>
+                  <p class="evenement-desc">
+                    Un quartet jazz en live sur notre terrasse, avec une sélection
+                    de bières printanières. Places limitées, réservation conseillée.
+                  </p>
+                  <a
+                    href="../../contact/?sujet=evenement&lieu=rouans"
+                    class="btn-primary evenement-btn"
+                  >
+                    <span class="btn-icon">📩</span>
+                    Réserver ma place
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /.carousel-track -->
+        </div><!-- /.carousel-track-wrapper -->
+
+        <button class="carousel-btn carousel-btn--next" aria-label="Événement suivant">&#9654;</button>
+
+        <!-- Indicateurs (points) -->
+        <div class="carousel-dots" id="carousel-dots"></div>
+
+      </div><!-- /#carousel-avenir -->
+    </div>
+  </section>
+
+  <!-- ===================== ÉVÉNEMENTS PASSÉS ===================== -->
+  <section class="section-passes">
+    <div class="passes-inner">
+      <h2>Événements Passés</h2>
+
+      <div class="passes-grid">
+
+        <!-- Carte passé 1 -->
+        <article class="passe-card">
+          <div class="passe-card-img">
+            <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages" />
+          </div>
+          <div class="passe-card-body">
+            <h3>Soirée Bières & Fromages</h3>
+            <ul class="evenement-meta">
+              <li><span class="meta-icon">📅</span><span>Vendredi 20 mars 2026</span></li>
+              <li><span class="meta-icon">📍</span><span>Le Cabarotier – Rouans</span></li>
+            </ul>
+            <p class="evenement-desc">
+              Une soirée mémorable où nous avons marié bières artisanales et fromages
+              d'exception. Merci à tous les participants !
+            </p>
+
+            <!-- Galerie photos -->
+            <div class="galerie" data-total="5">
+              <div class="galerie-grid">
+                <!-- Photos toujours visibles -->
+                <div class="galerie-item galerie-item--visible">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages – photo 1" />
+                </div>
+                <div class="galerie-item galerie-item--visible">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages – photo 2" />
+                </div>
+                <!-- Photos cachées -->
+                <div class="galerie-item galerie-item--hidden">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages – photo 3" />
+                </div>
+                <div class="galerie-item galerie-item--hidden">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages – photo 4" />
+                </div>
+                <div class="galerie-item galerie-item--hidden">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée Bières & Fromages – photo 5" />
+                </div>
+              </div>
+              <button class="galerie-more-btn">+ 3 photos</button>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Carte passé 2 -->
+        <article class="passe-card">
+          <div class="passe-card-img">
+            <img src="../../Images/evenement-test.jpeg" alt="Concert acoustique" />
+          </div>
+          <div class="passe-card-body">
+            <h3>Concert Acoustique</h3>
+            <ul class="evenement-meta">
+              <li><span class="meta-icon">📅</span><span>Samedi 8 février 2026</span></li>
+              <li><span class="meta-icon">📍</span><span>Le Cabarotier – Rouans, étage</span></li>
+            </ul>
+            <p class="evenement-desc">
+              Une belle soirée acoustique à l'étage avec un duo guitare-voix.
+              Ambiance intimiste et bières de saison au rendez-vous.
+            </p>
+
+            <!-- Galerie sans photos supplémentaires -->
+            <div class="galerie" data-total="2">
+              <div class="galerie-grid">
+                <div class="galerie-item galerie-item--visible">
+                  <img src="../../Images/evenement-test.jpeg" alt="Concert acoustique – photo 1" />
+                </div>
+                <div class="galerie-item galerie-item--visible">
+                  <img src="../../Images/evenement-test.jpeg" alt="Concert acoustique – photo 2" />
+                </div>
+              </div>
+              <!-- Pas de bouton si <= 2 photos -->
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Carte passé 3 — duplique ce bloc pour en ajouter d'autres -->
+        <article class="passe-card">
+          <div class="passe-card-img">
+            <img src="../../Images/evenement-test.jpeg" alt="Soirée IPA" />
+          </div>
+          <div class="passe-card-body">
+            <h3>Soirée 100% IPA</h3>
+            <ul class="evenement-meta">
+              <li><span class="meta-icon">📅</span><span>Vendredi 10 janvier 2026</span></li>
+              <li><span class="meta-icon">📍</span><span>Le Cabarotier – Rouans</span></li>
+            </ul>
+            <p class="evenement-desc">
+              Une plongée dans l'univers des India Pale Ale avec une sélection de
+              12 IPA venues de toute l'Europe. Une soirée houblonnée inoubliable.
+            </p>
+
+            <div class="galerie" data-total="1">
+              <div class="galerie-grid">
+                <div class="galerie-item galerie-item--visible">
+                  <img src="../../Images/evenement-test.jpeg" alt="Soirée IPA – photo 1" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div><!-- /.passes-grid -->
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <h3>Le Cabarotier</h3>
+        <p>commerce de détail de boissons en magasin spécialisé</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">vendeur</a></li>
+          <li><a href="#">Pro experience</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn more</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Customer stories</a></li>
+          <li><a href="#">Best practices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="../../contact/">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Le Cabarotier — Cave &amp; Bières Artisanales. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    /* ── CAROUSEL ── */
+    const track     = document.querySelector('.carousel-track');
+    const slides    = Array.from(document.querySelectorAll('.carousel-slide'));
+    const btnPrev   = document.querySelector('.carousel-btn--prev');
+    const btnNext   = document.querySelector('.carousel-btn--next');
+    const dotsWrap  = document.getElementById('carousel-dots');
+
+    let current = 0;
+
+    // Génère les points
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      dot.setAttribute('aria-label', `Événement ${i + 1}`);
+      if (i === 0) dot.classList.add('carousel-dot--active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+
+    // Cache les flèches si un seul slide
+    if (slides.length <= 1) {
+      btnPrev.style.display = 'none';
+      btnNext.style.display = 'none';
+      dotsWrap.style.display = 'none';
+    }
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('carousel-dot--active', i === current));
+    }
+
+    btnPrev.addEventListener('click', () => goTo(current - 1));
+    btnNext.addEventListener('click', () => goTo(current + 1));
+
+    /* ── GALERIE +X PHOTOS ── */
+    document.querySelectorAll('.galerie').forEach(galerie => {
+      const btn     = galerie.querySelector('.galerie-more-btn');
+      const hidden  = galerie.querySelectorAll('.galerie-item--hidden');
+
+      if (!btn || hidden.length === 0) return;
+
+      btn.addEventListener('click', () => {
+        hidden.forEach(item => {
+          item.classList.remove('galerie-item--hidden');
+          item.classList.add('galerie-item--visible');
+        });
+        btn.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

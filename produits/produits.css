@@ -1,0 +1,397 @@
+/* =============================================
+   PRODUITS.CSS — Styles spécifiques à la page
+   "Nos Produits" du Cabarotier
+   Dépend de : ../style.css (variables, nav, footer, boutons)
+============================================= */
+
+/* =============================================
+   HERO
+============================================= */
+.produits-hero {
+  background: var(--beige);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+  padding: 56px 48px 48px;
+}
+
+.produits-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.produits-hero-label {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--rouge);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.produits-hero h1 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.produits-hero p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+}
+
+/* =============================================
+   SECTION TAILLES
+============================================= */
+.section-tailles {
+  background: var(--beige);
+  padding: 72px 48px 80px;
+}
+
+.tailles-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tailles-inner h2,
+.vieillissement-inner h2,
+.coffret-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--noir);
+  margin-bottom: 36px;
+  letter-spacing: 0.01em;
+}
+
+.tailles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =============================================
+   CARTE TAILLE
+============================================= */
+.taille-card {
+  background: var(--blanc);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px var(--ombre);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.taille-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+}
+
+.taille-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.taille-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.taille-card:hover .taille-card-img img {
+  transform: scale(1.05);
+}
+
+.taille-card-body {
+  padding: 20px 20px 28px;
+}
+
+.taille-card-body h3 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--rouge);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.taille-card-body p {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.97rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+}
+
+/* =============================================
+   SECTION VIEILLISSEMENT
+============================================= */
+.section-vieillissement {
+  background: var(--blanc);
+  padding: 72px 0 80px;
+  overflow: hidden;
+}
+
+.vieillissement-inner {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 48px;
+}
+
+.vieillissement-intro {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+  margin-top: -16px;
+  line-height: 1.7;
+}
+
+/* ── TAPIS ROULANT ── */
+.tapis-wrapper {
+  width: 100%;
+  overflow: hidden;
+  /* Masque les cartes hors écran */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.tapis {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: tapis-scroll 32s linear infinite;
+}
+
+.tapis:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tapis-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── CARTE BIÈRE ── */
+.tapis-item {
+  flex-shrink: 0;
+  width: 260px;
+}
+
+.biere-card {
+  background: var(--beige-clair);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px var(--ombre);
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+
+.biere-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.biere-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.biere-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.biere-card:hover .biere-card-img img {
+  transform: scale(1.05);
+}
+
+.biere-card-body {
+  padding: 16px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.biere-card-body h3 {
+  font-family: 'SmithyXT', 'EB Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--noir);
+}
+
+.biere-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  color: var(--gris-texte);
+  line-height: 1.5;
+}
+
+.biere-age {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--rouge);
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 3px 10px;
+  align-self: flex-start;
+}
+
+/* =============================================
+   SECTION COFFRET CADEAU
+============================================= */
+.section-coffret {
+  background: var(--beige);
+  padding: 72px 48px 88px;
+  border-top: 1px solid rgba(139, 0, 0, 0.08);
+}
+
+.coffret-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.coffret-featured {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+  background: var(--blanc);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 28px var(--ombre);
+}
+
+.coffret-featured-img {
+  height: 100%;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.coffret-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.coffret-featured:hover .coffret-featured-img img {
+  transform: scale(1.04);
+}
+
+.coffret-featured-body {
+  padding: 40px 40px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.coffret-badge {
+  display: inline-block;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-family: 'EB Garamond', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.coffret-featured-body h3 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.coffret-tagline {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--rouge);
+}
+
+.coffret-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--gris-texte);
+  line-height: 1.75;
+}
+
+.coffret-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 900px) {
+  .tailles-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .coffret-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .coffret-featured-img {
+    min-height: 260px;
+  }
+
+  .coffret-featured-body {
+    padding: 28px 28px 36px;
+  }
+}
+
+@media (max-width: 760px) {
+  .produits-hero,
+  .section-tailles,
+  .section-coffret {
+    padding: 40px 24px 56px;
+  }
+
+  .vieillissement-inner {
+    padding: 0 24px;
+  }
+
+  .tapis-item {
+    width: 220px;
+  }
+
+  .biere-card-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .produits-hero h1 {
+    font-size: 3rem;
+  }
+}

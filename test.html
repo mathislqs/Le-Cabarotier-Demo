@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Avis Google</title>
+</head>
+<body>
+
+  <div id="avis-container"></div>
+
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.googleapis.com/maps/api/js?`+e;a.onerror=()=>n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a);d[q]=f}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyDGHpyM2epjjxCTbTR5vhA0cCb5dC0EJkU", v: "weekly"});
+  </script>
+
+  <script>
+    async function chargerAvis() {
+      const { Place } = await google.maps.importLibrary("places");
+
+      const place = new Place({
+        id: "ChIJwzrDoXGZBUgRox5kKKcWqo8",
+      });
+
+      await place.fetchFields({
+        fields: ["displayName", "rating", "userRatingCount", "reviews"],
+      });
+
+      console.log("Note moyenne :", place.rating);
+      console.log("Nombre d'avis :", place.userRatingCount);
+      console.log("Avis :", place.reviews);
+    }
+
+    window.addEventListener("load", chargerAvis);
+  </script>
+
+</body>
+</html>

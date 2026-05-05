@@ -1,0 +1,449 @@
+/* =============================================
+   ROUANS.CSS — Styles spécifiques à la page
+   magasin de Rouans
+   Dépend de : ../style.css (variables, nav, footer, boutons)
+============================================= */
+
+/* =============================================
+   HERO MAGASIN
+============================================= */
+.magasin-hero {
+  background: var(--beige);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+  padding: 56px 48px 48px;
+}
+
+.magasin-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.magasin-hero-label {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--rouge);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.magasin-hero h1 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.magasin-hero p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+}
+
+/* =============================================
+   SECTION ÉVÉNEMENT
+============================================= */
+.section-evenement {
+  background: var(--blanc);
+  padding: 60px 48px;
+}
+
+.evenement-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.evenement-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--noir);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.evenement-img-wrapper {
+  width: 100%;
+  max-height: 420px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px var(--ombre);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.evenement-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================================
+   SECTION ESPACES
+============================================= */
+.section-espaces {
+  background: var(--beige);
+  padding: 64px 48px 80px;
+}
+
+.espaces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.espace-card {
+  background: var(--blanc);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px var(--ombre);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-align: center;
+}
+
+.espace-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+}
+
+.espace-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.espace-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.espace-card:hover .espace-card-img img {
+  transform: scale(1.05);
+}
+
+.espace-card-body {
+  padding: 20px 20px 28px;
+}
+
+.espace-card-body h3 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--rouge);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.espace-card-body p {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.97rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+}
+
+/* =============================================
+   SECTION HORAIRES & INFOS
+============================================= */
+.section-infos {
+  background: var(--blanc);
+  padding: 72px 48px 80px;
+}
+
+.infos-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.infos-block h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--rouge);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+/* Horaires */
+.horaires-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.horaires-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.horaires-list li:last-child {
+  border-bottom: none;
+}
+
+.jour {
+  color: var(--noir);
+  font-weight: 600;
+}
+
+.heure {
+  color: var(--gris-texte);
+}
+
+.heure.fermé {
+  color: var(--rouge);
+  font-style: italic;
+}
+
+/* Infos pratiques */
+.pratique-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.pratique-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.02rem;
+  color: var(--gris-texte);
+  line-height: 1.5;
+}
+
+.pratique-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pratique-list em {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.infos-btn {
+  margin-top: 4px;
+}
+
+/* =============================================
+   SECTION GÉRANT
+============================================= */
+.section-gerant {
+  background: var(--beige);
+  padding: 72px 48px 80px;
+  border-top: 1px solid rgba(139, 0, 0, 0.08);
+}
+
+.gerant-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gerant-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--rouge);
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+.gerant-card {
+  background: var(--blanc);
+  border-radius: 12px;
+  box-shadow: 0 2px 20px var(--ombre);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 36px;
+}
+
+/* Placeholder photo */
+.gerant-photo-placeholder {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--beige);
+  border: 3px dashed rgba(139, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.gerant-bio h3 {
+  font-family: 'SmithyXT', 'EB Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--noir);
+  margin-bottom: 4px;
+}
+
+.gerant-nom-famille {
+  font-size: 1rem;
+  color: var(--rouge);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+}
+
+.gerant-bio p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--gris-texte);
+  line-height: 1.75;
+  margin-top: 14px;
+}
+
+/* =============================================
+   SECTION AVIS
+============================================= */
+.section-avis {
+  background: var(--blanc);
+  padding: 72px 48px 88px;
+}
+
+.avis-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.avis-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--rouge);
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.avis-card {
+  background: var(--beige-clair);
+  border-radius: 10px;
+  padding: 22px 20px 24px;
+  box-shadow: 0 2px 12px var(--ombre);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.avis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.11);
+}
+
+.avis-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.avis-header strong {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--noir);
+}
+
+.avis-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.etoiles {
+  color: #c8960c;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.avis-date {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.avis-card p {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.97rem;
+  color: var(--gris-texte);
+  line-height: 1.7;
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 1000px) {
+  .avis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .magasin-hero {
+    padding: 40px 24px 36px;
+  }
+
+  .section-evenement,
+  .section-espaces,
+  .section-infos,
+  .section-gerant,
+  .section-avis {
+    padding: 48px 24px 60px;
+  }
+
+  .espaces-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .infos-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gerant-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .avis-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .magasin-hero h1 {
+    font-size: 3rem;
+  }
+}

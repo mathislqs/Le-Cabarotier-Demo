@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Produits – Le Cabarotier</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="../style.css" />
+  <!-- CSS spécifique -->
+  <link rel="stylesheet" href="produits.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a href="../" class="nav-logo">Le Cabarotier</a>
+    <ul class="nav-links">
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../produits/">Nos Produits</a></li>
+      <li><a href="../ville/">Où Sommes Nous ?</a></li>
+      <li><a href="../evenements/">Nos Événements</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="produits-hero">
+    <div class="produits-hero-inner">
+      <span class="produits-hero-label">Le Cabarotier</span>
+      <h1>Nos Produits</h1>
+      <p>Une sélection passionnée de bières artisanales d'exception</p>
+    </div>
+  </section>
+
+  <!-- ===================== TAILLE DE BIÈRE ===================== -->
+  <section class="section-tailles">
+    <div class="tailles-inner">
+      <h2>Taille de bière</h2>
+
+      <div class="tailles-grid">
+
+        <article class="taille-card">
+          <div class="taille-card-img">
+            <img src="../Images/staff-degustation-2.jpg" alt="Petite bouteille" />
+          </div>
+          <div class="taille-card-body">
+            <h3>Petite bouteille</h3>
+            <p>
+              Format idéal pour la découverte et la dégustation. Parfait pour
+              goûter plusieurs références en une soirée.
+            </p>
+          </div>
+        </article>
+
+        <article class="taille-card">
+          <div class="taille-card-img">
+            <img src="../Images/staff-degustation-3.jpg" alt="Grande bouteille" />
+          </div>
+          <div class="taille-card-body">
+            <h3>Grande bouteille</h3>
+            <p>
+              Pour partager entre amis ou savourer une bière de caractère à son
+              rythme. Le format convivial par excellence.
+            </p>
+          </div>
+        </article>
+
+        <article class="taille-card">
+          <div class="taille-card-img">
+            <img src="../Images/carte.jpg" alt="Fût" />
+          </div>
+          <div class="taille-card-body">
+            <h3>Fût</h3>
+            <p>
+              Pour vos événements et soirées. Disponible en plusieurs contenances,
+              à réserver à l'avance auprès de nos équipes.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BIÈRES DE VIEILLISSEMENT ===================== -->
+  <section class="section-vieillissement">
+    <div class="vieillissement-inner">
+      <h2>Bières d'élégance</h2>
+      <p class="vieillissement-intro">
+        Des bières rares, élevées en cave et sélectionnées avec soin.
+        Chaque millésime est une expérience unique.
+      </p>
+    </div>
+
+    <!-- Tapis roulant -->
+    <div class="tapis-wrapper">
+      <div class="tapis" id="tapis">
+
+        <!-- ── Les cartes sont dupliquées (×2) pour le défilement infini ── -->
+        <!-- Bloc 1 — original -->
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Grimbergen Blonde 2016" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Grimbergen Blonde</h3>
+              <p class="biere-desc">Bière blonde simple et efficace</p>
+              <span class="biere-age">Millésime 2016 · Bordeaux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Rochefort 10 2018" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Rochefort 10</h3>
+              <p class="biere-desc">Quadruple trappiste aux notes de prune et de caramel</p>
+              <span class="biere-age">Millésime 2018 · Namur</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Cantillon Gueuze 2019" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Cantillon Gueuze</h3>
+              <p class="biere-desc">Lambic spontané d'une acidité remarquable</p>
+              <span class="biere-age">Millésime 2019 · Bruxelles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Westvleteren 12 2017" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Westvleteren 12</h3>
+              <p class="biere-desc">La légendaire trappiste aux arômes complexes</p>
+              <span class="biere-age">Millésime 2017 · Flandre</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Orval 2020" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Orval</h3>
+              <p class="biere-desc">Trappiste houblonnée à refermentation unique</p>
+              <span class="biere-age">Millésime 2020 · Luxembourg belge</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Saison Dupont 2015" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Saison Dupont</h3>
+              <p class="biere-desc">Saison rustique aux notes herbacées et épicées</p>
+              <span class="biere-age">Millésime 2015 · Hainaut</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 2 — copie pour le défilement infini -->
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Grimbergen Blonde 2016" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Grimbergen Blonde</h3>
+              <p class="biere-desc">Bière blonde simple et efficace</p>
+              <span class="biere-age">Millésime 2016 · Bordeaux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Rochefort 10 2018" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Rochefort 10</h3>
+              <p class="biere-desc">Quadruple trappiste aux notes de prune et de caramel</p>
+              <span class="biere-age">Millésime 2018 · Namur</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Cantillon Gueuze 2019" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Cantillon Gueuze</h3>
+              <p class="biere-desc">Lambic spontané d'une acidité remarquable</p>
+              <span class="biere-age">Millésime 2019 · Bruxelles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Westvleteren 12 2017" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Westvleteren 12</h3>
+              <p class="biere-desc">La légendaire trappiste aux arômes complexes</p>
+              <span class="biere-age">Millésime 2017 · Flandre</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Orval 2020" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Orval</h3>
+              <p class="biere-desc">Trappiste houblonnée à refermentation unique</p>
+              <span class="biere-age">Millésime 2020 · Luxembourg belge</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tapis-item" aria-hidden="true">
+          <div class="biere-card">
+            <div class="biere-card-img">
+              <img src="../Images/evenement-test.jpeg" alt="Saison Dupont 2015" />
+            </div>
+            <div class="biere-card-body">
+              <h3>Saison Dupont</h3>
+              <p class="biere-desc">Saison rustique aux notes herbacées et épicées</p>
+              <span class="biere-age">Millésime 2015 · Hainaut</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.tapis -->
+    </div><!-- /.tapis-wrapper -->
+  </section>
+
+  <!-- ===================== COFFRET CADEAU ===================== -->
+  <section class="section-coffret">
+    <div class="coffret-inner">
+      <h2>Coffret cadeau</h2>
+
+      <div class="coffret-featured">
+        <div class="coffret-featured-img">
+          <img src="../Images/coffret-cadeau.jpg" alt="Coffret de l'Avent Le Cabarotier" />
+        </div>
+        <div class="coffret-featured-body">
+          <span class="coffret-badge">Édition limitée</span>
+          <h3>Coffret de l'Avent</h3>
+          <p class="coffret-tagline">Une bière en décembre jusqu'à Noël</p>
+          <p class="coffret-desc">
+            Chaque jour de décembre, découvrez une nouvelle bière artisanale
+            soigneusement sélectionnée par notre équipe. Une façon gourmande et
+            originale de patienter jusqu'à Noël.
+          </p>
+          <a href="../contact/?sujet=autre" class="btn-primary coffret-btn">
+            <span class="btn-icon">🎁</span>
+            Nous contacter pour commander
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <h3>Le Cabarotier</h3>
+        <p>commerce de détail de boissons en magasin spécialisé</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#" class="underline">vendeur</a></li>
+          <li><a href="#">Pro experience</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn more</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Customer stories</a></li>
+          <li><a href="#">Best practices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="../contact/">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Le Cabarotier — Cave &amp; Bières Artisanales. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    /* ── TAPIS ROULANT — pause au survol ── */
+    const tapis = document.getElementById('tapis');
+
+    tapis.addEventListener('mouseenter', () => {
+      tapis.style.animationPlayState = 'paused';
+    });
+
+    tapis.addEventListener('mouseleave', () => {
+      tapis.style.animationPlayState = 'running';
+    });
+  </script>
+
+</body>
+</html>

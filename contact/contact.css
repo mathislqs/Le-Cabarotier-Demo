@@ -1,0 +1,266 @@
+/* =============================================
+   CONTACT.CSS — Styles spécifiques à la page
+   "Contact" du Cabarotier
+   Dépend de : ../style.css (variables, nav, footer, boutons)
+============================================= */
+
+/* =============================================
+   HERO DE PAGE
+============================================= */
+.contact-hero {
+  background: var(--beige);
+  text-align: center;
+  padding: 56px 24px 48px;
+  border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.contact-hero h1 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--rouge);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.contact-hero p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+}
+
+/* =============================================
+   SECTION CONTACT
+============================================= */
+.section-contact {
+  background: var(--blanc);
+  padding: 72px 24px 88px;
+}
+
+/* =============================================
+   CARTE FORMULAIRE
+============================================= */
+.contact-card {
+  background: var(--beige);
+  border-radius: 12px;
+  box-shadow: 0 4px 28px var(--ombre);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 52px 56px;
+}
+
+/* =============================================
+   FORMULAIRE — LAYOUT DEUX COLONNES
+============================================= */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 56px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =============================================
+   GROUPES DE CHAMPS
+============================================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--noir);
+  font-weight: 600;
+}
+
+.required {
+  color: var(--rouge);
+  margin-left: 2px;
+}
+
+/* =============================================
+   INPUTS & TEXTAREA
+============================================= */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: var(--blanc);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--noir);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--rouge);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* =============================================
+   SELECTS CUSTOM
+============================================= */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--noir);
+  pointer-events: none;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 11px 40px 11px 14px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: var(--blanc);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--noir);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select-wrapper select:focus {
+  border-color: var(--rouge);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+/* =============================================
+   CHECKBOX CUSTOM
+============================================= */
+.form-group--checkbox {
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Cache la checkbox native */
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Checkbox visuelle */
+.checkbox-custom {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: var(--blanc);
+  margin-top: 1px;
+  transition: border-color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Coche quand cochée */
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: 2px solid var(--blanc);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.checkbox-label:hover .checkbox-custom {
+  border-color: var(--rouge);
+}
+
+.checkbox-text {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--gris-texte);
+  line-height: 1.5;
+}
+
+/* =============================================
+   BOUTON ENVOYER
+============================================= */
+.form-submit {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 760px) {
+  .contact-card {
+    padding: 36px 24px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Sur mobile, colonne droite passe sous la gauche */
+  .form-col--right {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 40px 16px 36px;
+  }
+
+  .section-contact {
+    padding: 48px 16px 64px;
+  }
+}

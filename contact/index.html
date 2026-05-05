@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Le Cabarotier</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="../style.css" />
+  <!-- CSS spécifique à cette page -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a href="../index.html" class="nav-logo">Le Cabarotier</a>
+    <ul class="nav-links">
+      <li><a href="../contact/index.html">Contact</a></li>
+      <li><a href="../produits/index.html">Nos Produits</a></li>
+      <li><a href="../ville/index.html">Où Sommes Nous ?</a></li>
+      <li><a href="../evenements/">Nos Événements</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO PAGE ===================== -->
+  <section class="contact-hero">
+    <h1>Contactez-nous</h1>
+    <p>Une question, une réservation, un événement ? On vous répond vite.</p>
+  </section>
+
+  <!-- ===================== FORMULAIRE ===================== -->
+  <section class="section-contact">
+    <div class="contact-card">
+
+      <form class="contact-form" action="send_email.php" method="POST" novalidate>
+
+        <!-- Colonne gauche : infos personnelles -->
+        <div class="form-col form-col--left">
+
+          <div class="form-group">
+            <label for="nom">Nom<span class="required">*</span></label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Téléphone<span class="required">*</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Votre message…"></textarea>
+          </div>
+
+        </div>
+
+        <!-- Colonne droite : options -->
+        <div class="form-col form-col--right">
+
+          <div class="form-group">
+            <label for="magasin">Vous voulez contacter :</label>
+            <div class="select-wrapper">
+              <select id="magasin" name="magasin">
+                <option value="rouans">Rouans</option>
+                <option value="saint-hilaire">Saint-Hilaire</option>
+                <option value="les-deux">Les deux</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sujet">Pour :</label>
+            <div class="select-wrapper">
+              <select id="sujet" name="sujet">
+                <option value="futs">Fûts</option>
+                <option value="degustation">Dégustation</option>
+                <option value="evenement">Gestion d'événement</option>
+                <option value="privatisation">Réservation / Privatisation d'espace</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group form-group--checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" name="cgu" required />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">J'accepte les conditions d'utilisation</span>
+            </label>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              <span class="btn-icon">✉️</span>
+              Envoyer
+            </button>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <h3>Le Cabarotier</h3>
+        <p>commerce de détail de boissons en magasin spécialisé</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">vendeur</a></li>
+          <li><a href="#">Pro experience</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn more</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Customer stories</a></li>
+          <li><a href="#">Best practices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Le Cabarotier — Cave &amp; Bières Artisanales. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

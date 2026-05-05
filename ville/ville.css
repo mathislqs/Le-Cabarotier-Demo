@@ -1,0 +1,211 @@
+/* =============================================
+   VILLE.CSS — Styles spécifiques à la page
+   "Où Sommes-Nous ?" du Cabarotier
+   Dépend de : ../style.css (variables, nav, footer, boutons)
+============================================= */
+
+/* =============================================
+   HERO DE PAGE
+============================================= */
+.ville-hero {
+  background: var(--beige);
+  text-align: center;
+  padding: 56px 24px 48px;
+  border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.ville-hero h1 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--rouge);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.ville-hero p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+}
+
+/* =============================================
+   SECTION MAGASINS
+============================================= */
+.section-magasins {
+  background: var(--blanc);
+  padding: 72px 48px 80px;
+}
+
+.magasins-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =============================================
+   CARTE MAGASIN
+============================================= */
+.magasin-card {
+  background: var(--beige-clair);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.magasin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.13);
+}
+
+.magasin-card-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.magasin-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.magasin-card:hover .magasin-card-img img {
+  transform: scale(1.05);
+}
+
+.magasin-card-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.magasin-card-body h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: 2rem;
+  color: var(--rouge);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Adresse */
+address {
+  font-style: normal;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  color: var(--gris-texte);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.adresse-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Description */
+.magasin-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+}
+
+/* Horaires */
+.magasin-horaires {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.92rem;
+  color: #666;
+  border-left: 3px solid var(--rouge);
+  padding-left: 12px;
+}
+
+.horaires-label {
+  font-weight: 700;
+  color: var(--noir);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+}
+
+/* Bouton — reprend .btn-primary du style commun,
+   on ajoute juste la largeur max pour cette page */
+.magasin-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* =============================================
+   SECTION CARTE GOOGLE MAPS
+============================================= */
+.section-carte {
+  background: var(--beige);
+  padding: 72px 48px 80px;
+  border-top: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.carte-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carte-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--rouge);
+  text-align: center;
+  margin-bottom: 36px;
+  letter-spacing: 0.02em;
+}
+
+.carte-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px var(--ombre);
+  border: 1px solid rgba(139, 0, 0, 0.12);
+}
+
+.carte-wrapper iframe {
+  display: block;
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 760px) {
+  .section-magasins {
+    padding: 48px 20px 60px;
+  }
+
+  .magasins-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .section-carte {
+    padding: 48px 20px 60px;
+  }
+
+  .carte-wrapper iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ville-hero {
+    padding: 40px 16px 36px;
+  }
+}

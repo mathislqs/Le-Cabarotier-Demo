@@ -1,0 +1,405 @@
+/* =============================================
+   EVENEMENTS.CSS — Styles spécifiques à la page
+   événements du Cabarotier Rouans
+   Dépend de : ../../style.css
+============================================= */
+
+/* =============================================
+   HERO
+============================================= */
+.evenements-hero {
+  background: var(--beige);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+  padding: 56px 48px 48px;
+}
+
+.evenements-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.evenements-hero-label {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--rouge);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.evenements-hero h1 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: var(--noir);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.evenements-hero p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gris-texte);
+}
+
+/* =============================================
+   SECTION À VENIR
+============================================= */
+.section-avenir {
+  background: var(--blanc);
+  padding: 64px 48px 80px;
+}
+
+.avenir-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.avenir-inner h2,
+.passes-inner h2 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--rouge);
+  margin-bottom: 36px;
+  letter-spacing: 0.02em;
+}
+
+/* =============================================
+   CAROUSEL
+============================================= */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 24px var(--ombre);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+/* Flèches */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--rouge);
+  background: var(--blanc);
+  color: var(--rouge);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: var(--rouge);
+  color: var(--blanc);
+  transform: scale(1.08);
+}
+
+/* Points */
+.carousel-dots {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--rouge);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.carousel-dot--active {
+  background: var(--rouge);
+}
+
+/* =============================================
+   ÉVÉNEMENT FEATURED (slide carousel)
+============================================= */
+.evenement-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 380px;
+  background: var(--blanc);
+}
+
+.evenement-featured-img {
+  overflow: hidden;
+}
+
+.evenement-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.evenement-featured-body {
+  padding: 40px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.evenement-featured-body h3 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--rouge);
+  letter-spacing: 0.01em;
+}
+
+/* Meta (date, heure, lieu) */
+.evenement-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.evenement-meta li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--gris-texte);
+}
+
+.meta-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.evenement-desc {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gris-texte);
+  line-height: 1.7;
+}
+
+.evenement-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* =============================================
+   SECTION ÉVÉNEMENTS PASSÉS
+============================================= */
+.section-passes {
+  background: var(--beige);
+  padding: 72px 48px 88px;
+  border-top: 1px solid rgba(139, 0, 0, 0.08);
+}
+
+.passes-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.passes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =============================================
+   CARTE ÉVÉNEMENT PASSÉ
+============================================= */
+.passe-card {
+  background: var(--blanc);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px var(--ombre);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.passe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+}
+
+.passe-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.passe-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.passe-card:hover .passe-card-img img {
+  transform: scale(1.05);
+}
+
+.passe-card-body {
+  padding: 22px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.passe-card-body h3 {
+  font-family: 'SnotmasterV', 'EB Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--rouge);
+  letter-spacing: 0.01em;
+}
+
+/* =============================================
+   GALERIE PHOTOS
+============================================= */
+.galerie {
+  margin-top: 8px;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.galerie-item {
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.galerie-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.galerie-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Visible / caché */
+.galerie-item--visible {
+  display: block;
+}
+
+.galerie-item--hidden {
+  display: none;
+}
+
+/* Bouton +X photos */
+.galerie-more-btn {
+  background: none;
+  border: 1.5px solid var(--rouge);
+  color: var(--rouge);
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.galerie-more-btn:hover {
+  background: var(--rouge);
+  color: var(--blanc);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 1000px) {
+  .passes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .evenements-hero {
+    padding: 40px 24px 36px;
+  }
+
+  .section-avenir,
+  .section-passes {
+    padding: 48px 24px 64px;
+  }
+
+  /* Carousel : cache les flèches sur mobile, on swipe */
+  .carousel-btn {
+    display: none;
+  }
+
+  /* Featured en colonne sur mobile */
+  .evenement-featured {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .evenement-featured-img {
+    height: 220px;
+  }
+
+  .evenement-featured-body {
+    padding: 24px 20px 28px;
+  }
+
+  .passes-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Mobile : 1 seule photo visible avant +X */
+  .galerie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sur mobile, cache dès la 2e photo */
+  .galerie-item--visible:not(:first-child) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .evenements-hero h1 {
+    font-size: 3rem;
+  }
+}
